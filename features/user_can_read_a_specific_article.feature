@@ -14,8 +14,8 @@ Feature: User can see a specific article
         When I visit the site
         And I click 'A breaking news item' 
         Then I should see 'William'
-        And I should see '2012/12/12'
+        And I should see '2012-12-12'
         When I click 'back'
         And I click 'Learn Rails 5' 
         Then I should see 'Camron'
-        And I should see '2013/11/11'
+        And I should see '2013-11-11'

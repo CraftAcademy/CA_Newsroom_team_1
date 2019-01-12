@@ -2,8 +2,10 @@
 
 - @articles.each do |article|
   %p= image_tag("article.jpg")  
-  %h3= article.title
+  %h3= link_to "#{article.title}", article
   %p= article.lede
   %p= article.author
   %p= article.date
+
+  
 
