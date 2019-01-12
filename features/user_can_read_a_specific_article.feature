@@ -1,4 +1,4 @@
-Feature: User can see a specific article
+Feature: User can see the details of a specific article 
 
   As a user
   In order to read an article
@@ -6,16 +6,18 @@ Feature: User can see a specific article
 
   Background:  
     Given the following articles exists
-      | title                | lede             | author  | date        | 
+      | title                | body             | author  | created_at  | 
       | A breaking news item | blah blah blah   | William | 2012/12/12  | 
-      | Learn Rails 5        | blah blah blah   | Camron  | 2013/11/11  |
+      | Learn Rails 5        | blah blah again  | Camron  | 2013/11/11  |
 
-   Scenario: Campaign details
+   Scenario: User can see the details of a specific article 
         When I visit the site
         And I click 'A breaking news item' 
         Then I should see 'William'
+        And I should see 'blah blah blah'
         And I should see '2012-12-12'
         When I click 'back'
-        And I click 'Learn Rails 5' 
+        And I click 'Learn Rails 5'
+        And I should see 'blah blah again' 
         Then I should see 'Camron'
         And I should see '2013-11-11'
